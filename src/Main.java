@@ -16,7 +16,8 @@ public class Main {
         Statement statement= C().createStatement();
         ResultSet resultSet= statement.executeQuery("SELECT * FROM medicos");
         while (resultSet.next()){
-            System.out.println(resultSet.getString("dni"));
+            System.out.println("dni: " + resultSet.getString("dni") +
+                    ", especialidad: " + resultSet.getString("especialidad"));
         }
     }
 }
